@@ -35,9 +35,11 @@ def login():
 
             if email_found:
                 message = 'There is already an account with this email'
+                flash(f"There is already an account with this email")
                 return render_template('index.html', message=message)
             elif password1 != password2:
                 message = 'Passwords do not match, please re-enter passwords'
+                flash(f"passwords do not match")
                 return render_template('index.html', message=message)
             else:
                 hashed = bcrypt.hashpw(password2.encode('utf-8'), bcrypt.gensalt())
@@ -68,10 +70,12 @@ def login():
                     user_obj= users.find_one({'email': session['email']})
                     return render_template('home.html', user=user_obj, posts=post)
                 else:
-                    message = 'Incorrect password, please try again'  
+                    message = 'Incorrect password, try again'
+                    flash(f'incorrect password')  
                     return render_template('index.html', message=message)
             else:
-                message = 'There is no account with that email. Please create a new account'
+                message = 'email dose not match any account ,please create one'
+                flash(f"no account with that email")
                 return render_template('index.html', message=message)
 
 @app.route('/logout')
