@@ -1,0 +1,150 @@
+html {
+    height: 100vh;
+}
+
+body {
+    height: 100vh;
+}
+
+svg {
+    fill: #000000;
+}
+
+#landing-pg-content {
+    color: rgb(67, 67, 67);
+}
+
+#or {
+    background-color: rgb(0, 0, 0);
+    position: relative;
+    bottom: 33px;
+    padding: 2px;
+}
+
+#already-account {
+    position: relative;
+    margin-top: -30px;
+}
+
+#landing-page-about {
+    line-height: 40px;
+    letter-spacing: 0.5px;
+}
+
+#community-guidelines-content {
+    line-height: 30px;
+    letter-spacing: 0.5px;
+}
+
+#x {
+    color: red;
+}
+
+.btn-primary {
+    background-color: #000000;
+    border-color: #000000;
+}
+
+.btn-primary:hover {
+    background-color: #000000;
+    border-color: rgb(0, 0, 0);
+}
+/* card flip styling */
+
+#card-container {
+    transform-style: preserve-3d;
+    transition: all 0.8s ease;
+    position: relative;
+}
+
+.front {
+    backface-visibility: hidden;
+    position: absolute;
+    transform: rotateX(0deg);
+}
+
+.back {
+    backface-visibility: hidden;
+    transform: rotateX(0deg);
+    transform: rotateY(180deg);
+}
+
+.flipCard {
+    transform: rotateY(180deg);
+}
+
+.flipCardBack {
+    transform: rotateY(360deg);
+}
+
+/* -----------------responsive title styling----------------- */
+
+@media screen and (max-width: 576px){
+    #title{
+        position: relative;
+        bottom: 80px;
+        left: 35px;
+        color: #f8f9fa;
+        font-size: 2rem;
+        letter-spacing: 2.5px;
+        margin-bottom: -50px;
+    }
+}
+
+@media screen and (min-width: 576px) {
+    #title{
+        position: relative;
+        bottom: 110px;
+        color: #f8f9fa;
+        font-size: 2.5rem;
+        letter-spacing: 2.5px;
+        margin-bottom: -50px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    #title{
+        position: relative;
+        bottom: 140px;
+        left: 10px;
+        color: #f8f9fa;
+        font-size: 3rem;
+        letter-spacing: 2.5px;
+        margin-bottom: -50px;
+    }
+}
+
+@media screen and (min-width: 890px) {
+    #title{
+        position: relative;
+        bottom: 140px;
+        color: #f8f9fa;
+        font-size: 3.5rem;
+        letter-spacing: 2.5px;
+        margin-bottom: -50px;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    #title {
+        position: relative;
+        bottom: 190px;
+        color: #f8f9fa;
+        font-size: 4rem;
+        letter-spacing: 2.5px;
+        left: 50px;
+        margin-bottom: -50px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    #title {
+        position: relative;
+        bottom: 210px;
+        color: #f8f9fa;
+        font-size: 4rem;
+        letter-spacing: 2.5px;
+        left: 50px;
+        margin-bottom: -80px;
+    }
+}

@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+{% block title %}Home{% endblock %}
+{% block content %}
+    {% include 'partials/navbar.html' %}
+
+    <div class="container-fluid">
+        <div class="row">
+            {% include 'partials/sidebar.html' %}
+            
+                <!--——————————————Make a Post Container———————————————————————————-->
+
+                <div class="container" id="make-post-container">
+                    <div class="col-8 offset-sm-2">
+                        <div id="make-post" class="justify-content-center" >
+                            
+                            
+                
+                                <div class="col-4">
+                                    <input type="text"  placeholder="what is your question??" data-toggle="modal" data-target="#make-post-modal">
+                                </div>
+                            </div>
+                        </div>  
+                    </div>
+                </div>
+                
+                <!--——————————————Pseudo Post One———————————————————————————-->
+                
+                <div>
+                    {% for post in posts|reverse %}
+                        <div class="container mt-5">
+                            <div class="col-10 offset-sm-1 pb-3">
+                                <div class="row d-flex justify-content-end">
+                                </div>
+                            </div>
+
+                            <div class="col-10 offset-sm-1 p-4 bg-black"  id="post">
+                                <div class="col-2">
+                                    </div>
+                                <div class="col-10 offset-sm-1">
+                                    <hr>
+                                    <p class="text-center">{{ post.content }}</p>
+                                    <hr>
+                                    <time datetime="{{ post.created_at }}" class="text-muted d-flex justify-content-end">{{ post.created_at }}</time>
+                                </div>
+                            </div>
+                            <div class="col-10 offset-sm-1 py-3">
+                                <div class="row d-flex justify-content-end pr-4">
+                                    <p class="text-muted pr-2"><i class="" id="comments" title="Comment"></i>0 comments</p>
+                                </div>
+                            </div>
+                            <hr class="mb-5">
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+<!--————————————————————————————Make a Post Module————————————————————————————————————-->
+    {% include 'partials/post.html' %}
+{% endblock %}
+
+

@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+{% block title %}View {{ user.username }}'s Settings{% endblock %}
+
+{% block content %}
+    {% include 'partials/navbar.html' %}
+    <div class="container-fluid">
+        <div class="row">
+            {% include 'partials/sidebar.html' %}
+
+            <div class="col-9">
+                <h3 class="text-center pb-4 pt-5 text-muted">Settings <span class="wave">&#9881;&#65039;</span></h3>
+                <div class="row pt-4 ml-5 d-flex justify-content-center">
+                    <div class="col-2 pt-5 ml-5">
+                    </div>
+                    <div class="col-9 d-flex align-items-center pt-0">
+                        <div class="row">
+                            <button class="btn btn-outline-danger" data-toggle="modal" data-target="#delete-account-modal">Delete Your Account</button>
+                        </div>
+                    </div>
+
+                    <div class="modal" tabindex="-1" role="dialog" id="delete-account-modal">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                            <div class="modal-content">
+                                <div class="modal-body">
+                                    <form id="delete-account" method="POST" action="/{{ user._id }}/settings/delete-account">
+                                        <h3 style="color: rgb(39, 235, 13);" class="text-center pt-4">Are You Sure You Want to Delete Your Account and All Your Posts?</h3>
+                                        <p class="text-muted text-center pt-3">You cannot undo this</p>
+                                    </form>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="submit" form="delete-account" class="btn btn-outline-danger">Delete My Account</button>
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                                        
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

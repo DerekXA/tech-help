@@ -1,0 +1,151 @@
+body {
+    background-color: #000000;
+}
+nav {
+    background-color: #5a5858;
+    color: lawngreen;
+}
+
+#navbar-title {
+    font-size: 2rem;
+}
+
+.wave {
+    animation-name: wave-animation;  /* Refers to the name of your @keyframes element below */
+    animation-duration: 2.5s;        /* Change to speed up or slow down */
+    animation-iteration-count: infinite;  /* Never stop waving :) */
+    transform-origin: 70% 70%;       /* Pivot around the bottom-left palm */
+    display: inline-block;
+    font-size: 1.5rem;
+}
+  
+@keyframes wave-animation {
+    0% { transform: rotate( 0.0deg) }
+    10% { transform: rotate(14.0deg) }  /* The following five values can be played with to make the waving more or less extreme */
+    20% { transform: rotate(-8.0deg) }
+    30% { transform: rotate(14.0deg) }
+    40% { transform: rotate(-4.0deg) }
+    50% { transform: rotate(10.0deg) }
+    60% { transform: rotate( 0.0deg) }  /* Reset for the last half to pause */
+    100% { transform: rotate( 0.0deg) }
+}
+.form-inline > .btn {
+    border-color: #4d96ac;
+    color: #4d96ac;
+    border-width: 1px;
+    border-radius: 10px;
+}
+
+.form-inline > .btn:hover {
+    background-color: white;
+}
+
+.dropdown-container > a {
+    color: #f6f6f6;
+    background-color: #cdcfd7;
+}
+
+.dropdown-container > a:hover {
+    cursor: pointer;
+    color: #08fd00;
+    text-decoration: none;
+}
+
+#sidebar > a {
+    background-color: #ffffff00;
+    color: #ffffff;
+}
+
+#sidebar > a:hover {
+    text-decoration: none;
+    color: #08fd00;
+}
+
+#sidebar > ul > li {
+    background-color: #ffffff00;
+    color: #f8f8f8;
+}
+
+#sidebar > ul > li:hover {
+    cursor: pointer;
+    color: #08fd00;
+}
+
+#sidebar > ul > a > li{
+    color: #ffffff;
+    background-color: #cdcfd700;
+}
+
+#sidebar > ul > a > li:hover{
+    color: #08fd00;
+    text-decoration: none;
+}
+
+.dropdown-container > li:hover {
+    cursor: pointer;
+    color: #ffffff;
+}
+
+.dropdown-container {
+    display: none;
+    padding-left: 8px;
+}
+
+.fa-caret-down {
+    float: right;
+    padding-right: 8px;
+}
+
+#sticky > #sidebar{
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;
+    background-color: #1043c500;
+    padding: 25px;
+}
+
+#sticky {
+    background-color: #000000;
+}
+
+#make-post-container {
+    margin-bottom: 120px;
+}
+
+#make-post-title {
+    position: relative;
+    top: 15px;
+    font-size: 2rem;
+    margin-bottom: -27px;
+    letter-spacing: 4px;
+    font-weight: lighter;
+}
+
+
+#make-post {
+    background-color: #000000;
+    
+    
+}
+
+
+.btn-primary {
+    background-color: #08fd00;
+    border-color: #000000;
+}
+
+#pseudo-post-circle {
+    width: 100px;
+    height: 100px;
+    z-index: 1;
+    position: relative;
+    bottom: 60px;
+    background-color: rgb(0, 0, 0);
+    margin-bottom: -140px;
+}
+
+
+#post {
+    box-shadow: 0 2px 4px 0 rgba(50, 219, 8, 0.2), 0 3px 10px 0 rgba(50, 219, 8, 0.2);
+    color: #08fd00;
+}

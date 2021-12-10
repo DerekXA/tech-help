@@ -1,0 +1,30 @@
+<nav class="navbar navbar-expand-lg navbar-dark" style="position: sticky">
+    <a class="navbar-brand ml-2 " href="home-page.html" id="navbar-title">Tech Help</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarText">
+        <span class="navbar-text ml-auto">
+            <ul class="navbar-nav mr-2">
+                <form class="form-inline">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn my-2 my-sm-0" type="submit">Search</button>
+                    
+                </form>
+            </ul>
+        </span>
+ <div class="collapse navbar-collapse" id="navbarText">
+     <a href="/{{ user._id }}/posts" class="nav-item list-group-item"><i ></i> View My Posts</a>
+     <a href="/logout"><li class="nav-item list-group-item" style="border: none;"><i  id="logout" title="Logout"></i> Logout</li></a>
+     <a href="/home" class="nav-item list-group-item mb-1" style="border: none;"><i></i> Home</a>
+     <li class="nav-item list-group-item dropdown-btn mb-1" style="border: none;">
+         <span><i  id="community" title="Community Resources"></i>Outside Resources<i ></i></span>
+     </li>
+     <div class="dropdown-container">
+         <a href="#" class="nav-item list-group-item"><i ></i> StackOverFlow</a>
+         <a href="#" class="nav-item list-group-item"><i ></i> Quara</a>
+         <a href="#" class="nav-item list-group-item mb-1"><i ></i>StackExchange </a>
+     </div>
+        </div>
+    </div>
+</nav>
